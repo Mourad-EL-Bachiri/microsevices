@@ -29,7 +29,7 @@ public class userServiceImpl implements IUserService {
         //todo: check if email not taken
         //todo: check isFraudster
         restTemplate.getForObject(
-                "http://localhost:8081/api/v1/fraud-check/{userId}",
+                "http://FRAUD/api/v1/fraud-check/{userId}",
                 FraudResponse.class,
                 user.getId()
                 );
