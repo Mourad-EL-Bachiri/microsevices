@@ -1,4 +1,4 @@
-package com.giantLink.fraud.response;
+package com.giantLink.clients.fraud;
 
 public record FraudResponse(Boolean isFraudster) {
 }

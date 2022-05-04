@@ -1,6 +1,6 @@
 package com.giantLink.fraud.controller;
 
-import com.giantLink.fraud.response.FraudResponse;
+import com.giantLink.clients.fraud.FraudResponse;
 import com.giantLink.fraud.services.IFraudService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
