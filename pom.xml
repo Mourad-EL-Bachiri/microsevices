@@ -13,6 +13,7 @@
         <module>fraud</module>
         <module>eureka-server</module>
         <module>project-clients</module>
+        <module>notification</module>
     </modules>
 
     <name>mouradservices</name>
