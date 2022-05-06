@@ -1,8 +1,8 @@
 package com.giantLink.user.service.impl;
 
+import com.giantLink.amqp.RabbitMQMessageProducer;
 import com.giantLink.clients.fraud.FraudClient;
 import com.giantLink.clients.fraud.FraudResponse;
-import com.giantLink.clients.notifications.NotificationClient;
 import com.giantLink.clients.notifications.NotificationRequest;
 import com.giantLink.user.entity.User;
 import com.giantLink.user.repository.UserRepository;
@@ -17,7 +17,8 @@ public class userServiceImpl implements IUserService {
 
     private final UserRepository userRepository;
     private final FraudClient fraudClient;
-    private final NotificationClient notificationClient;
+ //   private final NotificationClient notificationClient;
+    private final RabbitMQMessageProducer producer;
 
     @Override
     public void addUser(UserRequest userRequest) {
@@ -34,15 +35,22 @@ public class userServiceImpl implements IUserService {
 //                FraudResponse.class,
 //                user.getId()
 //                );
-        FraudResponse fraudResponse = fraudClient.isFraudster(user.getId());
+       FraudResponse fraudResponse = fraudClient.isFraudster(user.getId());
+       if(fraudResponse.isFraudster()){
+           throw new RuntimeException("Fraudster !!!");
+       }
 
         // send nofification
-        notificationClient.sendNotification(
-                new NotificationRequest(
+        NotificationRequest notificationRequest = new NotificationRequest(
                         user.getId(),
                         user.getEmail(),
                         String.format("Hello %s, welcome to te hell", user.getFirstName())
-                )
+        );
+
+        producer.publish(
+                notificationRequest,
+                "internal.exchange",
+                "internal.notification.routing-key"
         );
     }
 }
