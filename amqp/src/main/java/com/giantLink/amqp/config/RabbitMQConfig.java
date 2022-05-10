@@ -17,7 +17,10 @@ public class RabbitMQConfig {
 
     private final ConnectionFactory connectionFactory;
 
-    //send messages to the queue
+    /**
+     * send messages to the queue
+     * @return template
+     */
     @Bean
     public AmqpTemplate amqpTemplate(){
         RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
@@ -25,7 +28,10 @@ public class RabbitMQConfig {
         return rabbitTemplate;
     }
 
-    // receive messages
+    /**
+     * receive messages
+     * @return factory
+     */
     @Bean
     public SimpleRabbitListenerContainerFactory simpleRabbitListenerContainerFactory(){
         SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
@@ -34,6 +40,10 @@ public class RabbitMQConfig {
         return factory;
     }
 
+    /**
+     * convert to Json
+     * @return message converter
+     */
     @Bean
     public MessageConverter jacksonConverter(){
         MessageConverter jackson2JsonMessageConverter = new Jackson2JsonMessageConverter();

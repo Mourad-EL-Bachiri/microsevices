@@ -27,6 +27,6 @@ public class Notification {
     private Integer toCustomerId;
     private String toCustomerEmail;
     private String sender;
-    private String messgae;
+    private String message;
     private LocalDateTime sentAt;
 }

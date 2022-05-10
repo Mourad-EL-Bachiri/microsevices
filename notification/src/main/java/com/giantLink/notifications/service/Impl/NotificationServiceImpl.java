@@ -21,7 +21,7 @@ public class NotificationServiceImpl implements INotificationService {
                 Notification.builder()
                         .toCustomerId(notificationRequest.toCustomerId())
                         .toCustomerEmail(notificationRequest.toCustomerEmail())
-                        .messgae(notificationRequest.message())
+                        .message(notificationRequest.message())
                         .sender("Mourad Bch")
                         .sentAt(LocalDateTime.now())
                         .build()

@@ -17,7 +17,6 @@ public class userServiceImpl implements IUserService {
 
     private final UserRepository userRepository;
     private final FraudClient fraudClient;
- //   private final NotificationClient notificationClient;
     private final RabbitMQMessageProducer producer;
 
     @Override
@@ -40,7 +39,7 @@ public class userServiceImpl implements IUserService {
            throw new RuntimeException("Fraudster !!!");
        }
 
-        // send nofification
+        // send notification
         NotificationRequest notificationRequest = new NotificationRequest(
                         user.getId(),
                         user.getEmail(),
