@@ -1,0 +1,7 @@
+D:\microservices\mouradservices\fraud\src\main\java\com\giantLink\fraud\services\IFraudService.java
+D:\microservices\mouradservices\fraud\src\main\java\com\giantLink\fraud\entities\Fraud.java
+D:\microservices\mouradservices\fraud\src\main\java\com\giantLink\fraud\repository\FraudRepository.java
+D:\microservices\mouradservices\fraud\src\main\java\com\giantLink\fraud\FraudApplication.java
+D:\microservices\mouradservices\fraud\src\main\java\com\giantLink\fraud\requests\FraudRequest.java
+D:\microservices\mouradservices\fraud\src\main\java\com\giantLink\fraud\controller\FraudController.java
+D:\microservices\mouradservices\fraud\src\main\java\com\giantLink\fraud\services\Impl\FraudServiceImpl.java

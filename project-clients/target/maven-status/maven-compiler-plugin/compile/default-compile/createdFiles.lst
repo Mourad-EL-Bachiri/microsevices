@@ -1,0 +1,4 @@
+com\giantLink\clients\fraud\FraudResponse.class
+com\giantLink\clients\notifications\NotificationRequest.class
+com\giantLink\clients\fraud\FraudClient.class
+com\giantLink\clients\notifications\NotificationClient.class
