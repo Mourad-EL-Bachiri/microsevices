@@ -1,0 +1,8 @@
+com\giantLink\fraud\entities\Fraud.class
+com\giantLink\fraud\services\Impl\FraudServiceImpl.class
+com\giantLink\fraud\entities\Fraud$FraudBuilder.class
+com\giantLink\fraud\repository\FraudRepository.class
+com\giantLink\fraud\controller\FraudController.class
+com\giantLink\fraud\requests\FraudRequest.class
+com\giantLink\fraud\FraudApplication.class
+com\giantLink\fraud\services\IFraudService.class

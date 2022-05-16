@@ -29,6 +29,7 @@
         <spring.boot.maven.plugin.version>2.5.7</spring.boot.maven.plugin.version>
         <spring.boot.dependencies.version>2.5.7</spring.boot.dependencies.version>
         <spring.cloud.version>2020.0.3</spring.cloud.version>
+        <image>mourad21/${project.artifactId}:${project.version}</image>
     </properties>
 
     <dependencyManagement>
@@ -76,6 +77,47 @@
                         <execution>
                             <goals>
                                 <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>com.google.cloud.tools</groupId>
+                    <artifactId>jib-maven-plugin</artifactId>
+                    <version>3.2.1</version>
+                    <configuration>
+                        <from>
+                            <image>eclipse-temurin:17</image>
+                            <auth>
+                                <username>mourad21</username>
+                                <password>a6db2f04-9ab1-408e-864c-9bd64b1f647c</password>
+                            </auth>
+                            <platforms>
+                                <platform>
+                                    <architecture>arm64</architecture>
+                                    <os>linux</os>
+                                </platform>
+                                <platform>
+                                    <architecture>amd64</architecture>
+                                    <os>linux</os>
+                                </platform>
+                            </platforms>
+                        </from>
+                        <to>
+                            <auth>
+                                <username>mourad21</username>
+                                <password>a6db2f04-9ab1-408e-864c-9bd64b1f647c</password>
+                            </auth>
+                            <tags>
+                                <tag>latest</tag>
+                            </tags>
+                        </to>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>build</goal>
                             </goals>
                         </execution>
                     </executions>

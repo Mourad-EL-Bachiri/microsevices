@@ -1,0 +1,10 @@
+com\giantLink\user\repository\UserRepository.class
+com\giantLink\user\config\UserConfig.class
+com\giantLink\user\service\IUserService.class
+com\giantLink\user\controller\UserController.class
+com\giantLink\user\entity\User.class
+com\giantLink\user\service\impl\userServiceImpl.class
+com\giantLink\user\response\UserResponse.class
+com\giantLink\user\entity\User$UserBuilder.class
+com\giantLink\user\request\UserRequest.class
+com\giantLink\user\UserApplication.class

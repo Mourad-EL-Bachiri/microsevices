@@ -1,0 +1,9 @@
+com\giantLink\notifications\entity\Notification.class
+com\giantLink\notifications\NotificationApplication.class
+com\giantLink\notifications\controller\NotificationController.class
+com\giantLink\notifications\entity\Notification$NotificationBuilder.class
+com\giantLink\notifications\service\INotificationService.class
+com\giantLink\notifications\service\Impl\NotificationServiceImpl.class
+com\giantLink\notifications\rabbitmq\NotificationConsumer.class
+com\giantLink\notifications\repository\NotificationRepository.class
+com\giantLink\notifications\config\NotificationConfig.class
