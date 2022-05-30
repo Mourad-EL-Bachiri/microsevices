@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-config
+data:
+  POSTGRES_DB: mourad
+  POSTGRES_USER: mourad
+  POSTGRES_PASSWORD: password
